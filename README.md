@@ -2,12 +2,6 @@
 
 A documentation website for Aerotest equipment manuals and technical documentation.
 
-## Website Structure
-
-- **Homepage**: https://ofradgley.github.io/aerotestmanuals/
-- **AT1470 Manuals**: https://ofradgley.github.io/aerotestmanuals/AT1470/
-- **AT1472 Manuals**: https://ofradgley.github.io/aerotestmanuals/AT1472/
-
 ## Adding New Manuals
 
 To add new equipment manuals:
