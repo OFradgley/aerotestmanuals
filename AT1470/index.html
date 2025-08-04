@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT1470 - Aerotest Manuals</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .company-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        .company-logo {
+            height: 60px;
+            width: auto;
+        }
+        .company-info {
+            text-align: left;
+        }
+        .company-name {
+            color: #0070C0;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1.2;
+        }
+        .company-tagline {
+            color: #333;
+            font-size: 0.85em;
+            margin: 2px 0 0 0;
+            line-height: 1.2;
+        }
+        .product-title {
+            margin: 0;
+            color: #333;
+            font-size: 1.3em;
+        }
+        .breadcrumb {
+            margin-bottom: 20px;
+            color: #666;
+            display: none;
+        }
+        .breadcrumb a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .product-image {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product-image .placeholder {
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 40px;
+            color: #666;
+            font-style: italic;
+        }
+        .manual-section {
+            margin: 30px 0;
+        }
+        .manual-section h2 {
+            color: #333;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .manual-list {
+            list-style: none;
+            padding: 0;
+        }
+        .manual-item {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #0066cc;
+        }
+        .manual-item a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .manual-item a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: none;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="breadcrumb">
+        <a href="../">Home</a> / AT1470
+    </div>
+
+    <header>
+        <div class="company-header">
+            <img src="../ms-icon-310x310.png" alt="Aerotest Ltd Logo" class="company-logo">
+            <div class="company-info">
+                <div class="company-name">Aerotest Ltd.</div>
+                <div class="company-tagline">Consultants & Specialists In Aero-Engine Test Facilities & Ground Support Equipment</div>
+            </div>
+        </div>
+        <h1 class="product-title">AT1470</h1>
+    </header>
+
+    <main>
+        <div class="product-image">
+            <div class="placeholder">
+                Product photo will be displayed here<br>
+                Please upload an image file named "product.jpg" to this folder
+            </div>
+        </div>
+
+        <div class="manual-section">
+            <h2>O&M Manual</h2>
+            <ul class="manual-list">
+                <li class="manual-item">
+                    <a href="#" onclick="alert('Please upload Issue 1 manual PDF to this folder')">Issue 1</a>
+                </li>
+            </ul>
+        </div>
+
+        <a href="../" class="back-link">← Back to All Manuals</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aerotest Manuals - AT1470 Documentation</p>
+    </footer>
+</body>
+</html>
