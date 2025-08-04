@@ -339,7 +339,7 @@
 
         <!-- Instructions Section -->
         <div class="product-list" style="margin-top: 30px;">
-            <h2>Quick Instructions</h2>
+            <h2>Instructions</h2>
             <div style="padding: 20px; background-color: #f9f9f9; border-radius: 5px;">
                 
                 <!-- 
@@ -348,7 +348,7 @@
                 ===========================================
                 -->
                 
-                <h3>🆕 Adding a Completely New Product:</h3>
+                <h3>📁 Adding a New Product:</h3>
                 <ol>
                     <li><strong>Create Folder:</strong> Create a new folder (e.g., "AT1520") in the main directory</li>
                     <li><strong>Copy Template:</strong> Copy the index.html file from an existing project folder (e.g., "AT1175") into your new folder</li>
@@ -360,48 +360,30 @@
                             <li>Update the manual issue number (line 261)</li>
                         </ul>
                     </li>
-                    <li><strong>Add to Admin Panel:</strong> Copy/paste a product-item block in the admin.html file</li>
+                    <li><strong>Add to Admin Panel:</strong> Copy/paste a product-item block and rename in the admin.html file</li>
                     <li><strong>Upload Files:</strong> Add your product image ("image.jpg") and PDF manual to the new folder</li>
                 </ol>
                 
-                <h3>📁 File Management for Existing Products:</h3>
-                <ul>
-                    <li><strong>Product Images:</strong> 
-                        <ul>
-                            <li>Place "Image.jpg" of the product in the product folder</li>
-                        </ul>
-                    </li>
-                    <li><strong>PDF Manuals:</strong> 
-                        <ul>
-                            <li>Upload PDF files to the product folder</li>
-                            <li>Edit index.html in that folder to update the manual links</li>
-                            <li>Change href="#" to href="your-manual.pdf"</li>
-                            <li>Remove the onclick="alert(...)" part</li>
-                        </ul>
-                    </li>
-                    <li><strong>Status Updates:</strong> After adding files, update the "Status:" in this admin panel</li>
-                </ul>
-                
+                                
                 <h3>🔧 Quick Reference - File Locations:</h3>
                 <div style="background-color: #e3f2fd; padding: 15px; border-radius: 5px; margin-top: 10px;">
                     <strong>Main Website Files:</strong><br>
-                    📄 <code>/index.html</code> - Main QR code landing page<br>
+                    📄 <code>/index.html</code> - Main landing page<br>
                     📄 <code>/admin.html</code> - This admin panel (add new products here)<br>
                     🖼️ <code>/ms-icon-310x310.png</code> - Company logo<br>
                     🖼️ <code>/favicon-32x32.png</code> - Browser tab icon<br><br>
                     
                     <strong>Product Structure Example:</strong><br>
-                    📁 <code>/AT1475/</code> - New product folder<br>
+                    📁 <code>/AT1520/</code> - New product folder<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;📄 <code>index.html</code> - Product page<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;🖼️ <code>product.jpg</code> - Product photo<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;📄 <code>AT1475-Manual-Issue1.pdf</code> - Manual file<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;🖼️ <code>Image.jpg</code> - Product photo<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;📄 <code>AT1520-Manual-Issue1.pdf</code> - Manual file<br>
                 </div>
                 
                 <h3>✅ Testing Your Changes:</h3>
                 <ul>
                     <li>Use the "View Page" buttons above to check your product pages</li>
                     <li>Verify images and PDF links work correctly</li>
-                    <li>Test the admin login from each product page footer</li>
                 </ul>
                 
             </div>
