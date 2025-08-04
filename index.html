@@ -9,7 +9,7 @@
     <style>
         /* 
         ===========================================
-        MAIN STYLING - DO NOT MODIFY UNLESS NEEDED
+        MAIN STYLING
         ===========================================
         */
         body {
@@ -21,45 +21,79 @@
         }
         header {
             background-color: #f4f4f4;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
             border-radius: 5px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
-        /* Grid layout for product cards - automatically adjusts to screen size */
-        .manual-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+        /* Company header with logo and text */
+        .company-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+            gap: 15px;
         }
-        /* Individual product card styling */
-        .manual-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            transition: box-shadow 0.3s ease;
+        .company-logo {
+            height: 60px;
+            width: auto;
         }
-        .manual-card:hover {
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        .company-info {
+            text-align: left;
         }
-        .manual-card a {
-            text-decoration: none;
-            color: #333;
+        .company-name {
+            color: #0070C0;  /* Aerotest blue color */
+            font-size: 1.5em;
             font-weight: bold;
-            font-size: 1.2em;
+            margin: 0;
+            line-height: 1.2;
         }
-        .manual-card a:hover {
-            color: #0066cc;
+        .company-tagline {
+            color: #333;
+            font-size: 0.85em;
+            margin: 2px 0 0 0;
+            line-height: 1.2;
         }
-        .manual-description {
-            margin-top: 10px;
-            color: #666;
-            font-size: 0.9em;
+        /* Content sections */
+        .content-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #0070C0;
+        }
+        .qr-instruction {
+            font-size: 1.1em;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .contact-section h2 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+        .contact-details {
+            font-size: 1em;
+            line-height: 1.8;
+        }
+        .contact-details a {
+            color: #0070C0;
+            text-decoration: none;
+        }
+        .contact-details a:hover {
+            text-decoration: underline;
         }
         footer {
-            margin-top: 50px;
+            margin-top: 20px;
             text-align: center;
             color: #666;
             border-top: 1px solid #eee;
@@ -70,74 +104,45 @@
 <body>
     <!-- 
     ========================================
-    HEADER SECTION
+    HEADER SECTION WITH COMPANY BRANDING
     ========================================
-    To change the main title or description, edit the text below
     -->
     <header>
-        <h1>Aerotest Manuals</h1>
-        <p>Technical documentation and manuals for Aerotest equipment</p>
+        <!-- Company logo and information section -->
+        <div class="company-header">
+            <!-- Company logo -->
+            <img src="ms-icon-310x310.png" alt="Aerotest Ltd Logo" class="company-logo">
+            <div class="company-info">
+                <!-- Company name in Aerotest blue (#0070C0) -->
+                <div class="company-name">Aerotest Ltd.</div>
+                <!-- Company tagline/description -->
+                <div class="company-tagline">Consultants & Specialists In Aero-Engine Test Facilities & Ground Support Equipment</div>
+            </div>
+        </div>
     </header>
 
     <main>
         <!-- 
         ========================================
-        PRODUCT CARDS SECTION
+        QR CODE INSTRUCTION SECTION
         ========================================
-        
-        TO ADD A NEW PRODUCT:
-        1. Copy one of the existing manual-card div blocks below
-        2. Change the href="FOLDER_NAME/" to your new product folder name
-        3. Change the product name (e.g., "AT1470" to your product number)
-        4. Change the description text
-        5. Create a new folder with the same name as your href
-        6. Copy one of the existing product index.html files into your new folder
-        7. Modify that index.html file for your new product
-        
-        EXAMPLE NEW PRODUCT CARD:
-        <div class="manual-card">
-            <a href="AT1234/">AT1234</a>
-            <div class="manual-description">
-                Manuals and documentation for AT1234 equipment
-            </div>
-        </div>
         -->
-        <div class="manual-grid">
-            <!-- PRODUCT 1: AT1470 -->
-            <div class="manual-card">
-                <a href="AT1470/">AT1470</a>
-                <div class="manual-description">
-                    Manuals and documentation for AT1470 equipment
-                </div>
+        <div class="content-section qr-instruction">
+            Please scan the QR code on your Aerotest product to access the relevant technical documentation and manuals.
+        </div>
+
+        <!-- 
+        ========================================
+        CONTACT DETAILS SECTION
+        ========================================
+        -->
+        <div class="contact-section">
+            <h2>Aerotest Ltd. contact details:</h2>
+            <div class="contact-details">
+                <strong>Website:</strong> <a href="https://www.aerotest.com" target="_blank">www.aerotest.com</a><br>
+                <strong>Email:</strong> <a href="mailto:info@aerotest.com">info@aerotest.com</a><br>
+                <strong>Tel:</strong> <a href="tel:+441442235557">+44 (0) 1442 235557</a>
             </div>
-            
-            <!-- PRODUCT 2: AT1472 -->
-            <div class="manual-card">
-                <a href="AT1472/">AT1472</a>
-                <div class="manual-description">
-                    Manuals and documentation for AT1472 equipment
-                </div>
-            </div>
-            
-            <!-- PRODUCT 3: AT1482 -->
-            <div class="manual-card">
-                <a href="AT1482/">AT1482</a>
-                <div class="manual-description">
-                    Manuals and documentation for AT1482 equipment
-                </div>
-            </div>
-            
-            <!-- 
-            TO ADD MORE PRODUCTS: Copy the block above and modify:
-            
-            <div class="manual-card">
-                <a href="YOUR_PRODUCT_FOLDER/">YOUR_PRODUCT_NAME</a>
-                <div class="manual-description">
-                    Manuals and documentation for YOUR_PRODUCT_NAME equipment
-                </div>
-            </div>
-            -->
-            
         </div>
     </main>
 
@@ -145,10 +150,9 @@
     ========================================
     FOOTER SECTION
     ========================================
-    You can modify the copyright text below if needed
     -->
     <footer>
-        <p>&copy; 2025 Aerotest Ltd. - Technical Documentation</p>
+        <p>&copy; 2025 Aerotest Ltd.</p>
     </footer>
 </body>
 </html>
