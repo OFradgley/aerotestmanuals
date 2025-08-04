@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerotest Manuals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .manual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .manual-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+        .manual-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .manual-card a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .manual-card a:hover {
+            color: #0066cc;
+        }
+        .manual-description {
+            margin-top: 10px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aerotest Manuals</h1>
+        <p>Technical documentation and manuals for Aerotest equipment</p>
+    </header>
+
+    <main>
+        <div class="manual-grid">
+            <div class="manual-card">
+                <a href="AT1470/">AT1470</a>
+                <div class="manual-description">
+                    Manuals and documentation for AT1470 equipment
+                </div>
+            </div>
+            
+            <div class="manual-card">
+                <a href="AT1472/">AT1472</a>
+                <div class="manual-description">
+                    Manuals and documentation for AT1472 equipment
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aerotest Manuals - Technical Documentation</p>
+    </footer>
+</body>
+</html>

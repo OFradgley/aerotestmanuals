@@ -1,0 +1,16 @@
+# GitHub Pages Jekyll configuration
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+
+include:
+  - README.md
+
+# Exclude files from processing
+exclude:
+  - .github/
+  - Gemfile
+  - Gemfile.lock
