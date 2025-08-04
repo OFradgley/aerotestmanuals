@@ -315,7 +315,7 @@
             ===========================================
             ADD NEW PRODUCTS HERE
             ===========================================
-            Copy one of the blocks above and paste it here, then modify:
+            Copy one of the blocks above and paste it in the correct location (numerically in order), then modify:
             
             TEMPLATE FOR NEW PRODUCT:
             <div class="product-item">
@@ -350,26 +350,25 @@
                 
                 <h3>🆕 Adding a Completely New Product:</h3>
                 <ol>
-                    <li><strong>Create Folder:</strong> Create a new folder (e.g., "AT1475") in the main directory</li>
-                    <li><strong>Copy Template:</strong> Copy the index.html file from AT1470 or AT1472 folder into your new folder</li>
+                    <li><strong>Create Folder:</strong> Create a new folder (e.g., "AT1520") in the main directory</li>
+                    <li><strong>Copy Template:</strong> Copy the index.html file from an existing project folder (e.g., "AT1175") into your new folder</li>
                     <li><strong>Edit Product Page:</strong> Open the new index.html and update:
                         <ul>
-                            <li>Page title (line ~12): Change "AT1470" to your product code</li>
-                            <li>Product title (line ~75): Update the h1 heading</li>
-                            <li>Footer text: Update copyright line with your product name</li>
+                            <li>Page title: Change "AT1175" to your new product code (line 191)</li>
+                            <li>Product title: Change the h1 heading "ATL1175-001 C-130J QEC WVR with Accessible Tail-Pipe “Aero-bag”" to your new product title (line 218)</li>
+                            <li>Manual Link: Change the manual link "ATL1175-001 WVR Aero Bag C-130J QEC Installation Instructions Issue 11.pdf" to your new manual PDF title (line 261)</li> 
+                            <li>Update the manual issue number (line 261)</li>
                         </ul>
                     </li>
-                    <li><strong>Add to Admin Panel:</strong> Scroll up in this admin.html file and copy/paste a product-item block (see comments above)</li>
-                    <li><strong>Upload Files:</strong> Add your product images and PDF manuals to the new folder</li>
+                    <li><strong>Add to Admin Panel:</strong> Copy/paste a product-item block in the admin.html file</li>
+                    <li><strong>Upload Files:</strong> Add your product image ("image.jpg") and PDF manual to the new folder</li>
                 </ol>
                 
                 <h3>📁 File Management for Existing Products:</h3>
                 <ul>
                     <li><strong>Product Images:</strong> 
                         <ul>
-                            <li>Place .jpg/.png files in the product folder</li>
-                            <li>Update the index.html file in that folder to link to your image</li>
-                            <li>Replace the placeholder div with: &lt;img src="your-image.jpg" alt="Product Photo" /&gt;</li>
+                            <li>Place "Image.jpg" of the product in the product folder</li>
                         </ul>
                     </li>
                     <li><strong>PDF Manuals:</strong> 
