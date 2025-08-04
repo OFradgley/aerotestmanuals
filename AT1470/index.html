@@ -30,6 +30,32 @@
         .breadcrumb a:hover {
             text-decoration: underline;
         }
+        .product-image {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product-image .placeholder {
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 40px;
+            color: #666;
+            font-style: italic;
+        }
+        .manual-section {
+            margin: 30px 0;
+        }
+        .manual-section h2 {
+            color: #333;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 10px;
+        }
         .manual-list {
             list-style: none;
             padding: 0;
@@ -45,14 +71,10 @@
             color: #0066cc;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1em;
         }
         .manual-item a:hover {
             text-decoration: underline;
-        }
-        .manual-description {
-            margin-top: 5px;
-            color: #666;
-            font-size: 0.9em;
         }
         .back-link {
             display: inline-block;
@@ -81,40 +103,26 @@
     </div>
 
     <header>
-        <h1>AT1470 Manuals</h1>
-        <p>Documentation and manuals for AT1470 equipment</p>
+        <h1>AT1470</h1>
+        <p>Equipment documentation and manuals</p>
     </header>
 
     <main>
-        <ul class="manual-list">
-            <li class="manual-item">
-                <a href="#" onclick="alert('Manual file not yet uploaded')">AT1470 User Manual</a>
-                <div class="manual-description">
-                    Complete user guide and operating instructions
-                </div>
-            </li>
-            
-            <li class="manual-item">
-                <a href="#" onclick="alert('Manual file not yet uploaded')">AT1470 Installation Guide</a>
-                <div class="manual-description">
-                    Step-by-step installation and setup procedures
-                </div>
-            </li>
-            
-            <li class="manual-item">
-                <a href="#" onclick="alert('Manual file not yet uploaded')">AT1470 Technical Specifications</a>
-                <div class="manual-description">
-                    Detailed technical specifications and requirements
-                </div>
-            </li>
-            
-            <li class="manual-item">
-                <a href="#" onclick="alert('Manual file not yet uploaded')">AT1470 Maintenance Guide</a>
-                <div class="manual-description">
-                    Maintenance procedures and troubleshooting
-                </div>
-            </li>
-        </ul>
+        <div class="product-image">
+            <div class="placeholder">
+                Product photo will be displayed here<br>
+                Please upload an image file named "product.jpg" to this folder
+            </div>
+        </div>
+
+        <div class="manual-section">
+            <h2>O&M Manual Versions</h2>
+            <ul class="manual-list">
+                <li class="manual-item">
+                    <a href="#" onclick="alert('Please upload Issue 1 manual PDF to this folder')">Issue 1</a>
+                </li>
+            </ul>
+        </div>
 
         <a href="../" class="back-link">← Back to All Manuals</a>
     </main>
