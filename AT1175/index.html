@@ -10,7 +10,7 @@
     Change the title below to match your product designation
     Format: "PRODUCT_NAME - Aerotest Manuals"
     -->
-    <title>AT1470 - Aerotest Manuals</title>
+    <title>ATL1482-001 - Aerotest Manuals</title>
     <!-- Favicon: Points to the parent directory for the favicon file -->
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <style>
@@ -90,14 +90,6 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .product-image .placeholder {
-            background-color: #f0f0f0;
-            border: 2px dashed #ccc;
-            border-radius: 8px;
-            padding: 40px;
-            color: #666;
-            font-style: italic;
-        }
         /* Manual section styling */
         .manual-section {
             margin: 30px 0;
@@ -130,6 +122,31 @@
         /* Hidden back link */
         .back-link {
             display: none;
+        }
+        /* Contact section styling */
+        .contact-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .contact-section h2 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+        .contact-details {
+            font-size: 1em;
+            line-height: 1.8;
+        }
+        .contact-details a {
+            color: #0070C0;
+            text-decoration: none;
+        }
+        .contact-details a:hover {
+            text-decoration: underline;
         }
         footer {
             margin-top: 50px;
@@ -171,7 +188,7 @@
 <body>
     <!-- Hidden breadcrumb navigation (can be shown by changing display: none to display: block in CSS) -->
     <div class="breadcrumb">
-        <a href="../">Home</a> / AT1470
+        <a href="../">Home</a> / AT1175
     </div>
 
     <!-- 
@@ -198,7 +215,7 @@
         PRODUCT TITLE
         Change this to match your specific product designation
         -->
-        <h1 class="product-title">AT1470</h1>
+        <h1 class="product-title">1175 C-130J QEC WVR with Accessible Tail-Pipe “Aero-bag”</h1>
     </header>
 
     <main>
@@ -206,73 +223,74 @@
         ===========================================
         PRODUCT IMAGE SECTION
         ===========================================
-        TO ADD A PRODUCT IMAGE:
+        TO CHANGE THE PRODUCT IMAGE:
         1. Place your image file in this folder (same folder as this index.html)
-        2. Replace the placeholder div below with an img tag like this:
-           <img src="your-image-filename.jpg" alt="AT1470 Product Photo" />
-        3. Delete or comment out the placeholder div
+        2. Update the src="" below to point to your image file
+        3. Update the alt="" text to describe your product
         
         SUPPORTED IMAGE FORMATS: .jpg, .jpeg, .png, .gif
         RECOMMENDED: Use .jpg for photos, .png for graphics with transparency
-        
-        EXAMPLE IMAGE CODE:
-        <img src="AT1470-photo.jpg" alt="AT1470 Equipment" />
         -->
         <div class="product-image">
-            <!-- PLACEHOLDER - Replace this with actual product image -->
-            <div class="placeholder">
-                Product photo will be displayed here<br>
-                Please upload an image file named "product.jpg" to this folder
-            </div>
+            <img src="Image.JPG" alt="ATL1175-001 C-130J QEC WVR with Accessible Tail-Pipe “Aero-bag”" />
         </div>
 
         <!-- 
         ===========================================
         MANUALS SECTION
         ===========================================
-        TO ADD MANUAL FILES:
-        1. Upload your PDF files to this folder
-        2. Replace the placeholder links below with actual PDF filenames
-        3. To add more versions, copy one of the <li class="manual-item"> blocks
+        TO ADD MORE MANUAL VERSIONS:
+        1. Upload your PDF file to this folder
+        2. Copy one of the <li class="manual-item"> blocks below
+        3. Change the href="" to point to your PDF filename
+        4. Change the text (e.g., "Issue 1" to "Issue 2", "Issue 3", etc.)
         
-        CURRENT STATUS: No manual files uploaded yet
-        
-        TO REPLACE PLACEHOLDER LINKS:
-        1. Change href="#" to href="your-manual-filename.pdf"
-        2. Remove the onclick="alert(...)" part
-        3. Update the text from "Issue 1" to match your manual version
-        
-        EXAMPLE WORKING MANUAL LINK:
+        EXAMPLE FOR ADDING ISSUE 2:
         <li class="manual-item">
-            <a href="AT1470-Manual-Issue1.pdf">Issue 1</a>
+            <a href="YOUR_MANUAL_FILENAME_ISSUE2.pdf">Issue 2</a>
         </li>
         -->
         <div class="manual-section">
             <h2>O&M Manual</h2>
             <ul class="manual-list">
                 <!-- 
-                PLACEHOLDER MANUAL LINK - Replace with actual PDF
-                Current: Shows alert message when clicked
-                Replace with: <a href="YOUR_MANUAL_FILE.pdf">Issue 1</a>
+                CURRENT MANUAL: Issue 11
+                The href below points to the actual PDF file in this folder
                 -->
                 <li class="manual-item">
-                    <a href="#" onclick="alert('Please upload Issue 1 manual PDF to this folder')">Issue 1</a>
+                    <a href="ATL1175-001 WVR Aero Bag C-130J QEC Installation Instructions Issue 11.pdf">Issue 11</a>
                 </li>
                 
+                <li class="manual-item">
+                    <a href="ATL1175-001 WVR Aero Bag C-130J QEC Installation Instructions Issue 10.pdf">Issue 10</a>
+                </li>
+
                 <!-- 
-                TO ADD MORE MANUAL VERSIONS:
-                Copy the block above and modify the filename and version number
+                TO ADD MORE VERSIONS, COPY THE BLOCK ABOVE AND MODIFY:
                 
-                EXAMPLES:
                 <li class="manual-item">
-                    <a href="AT1470-Manual-Issue2.pdf">Issue 2</a>
+                    <a href="YOUR_MANUAL_FILENAME_ISSUE2.pdf">Issue 2</a>
                 </li>
                 
                 <li class="manual-item">
-                    <a href="AT1470-Manual-Issue3.pdf">Issue 3</a>
+                    <a href="YOUR_MANUAL_FILENAME_ISSUE3.pdf">Issue 3</a>
                 </li>
                 -->
             </ul>
+        </div>
+
+        <!-- 
+        ===========================================
+        CONTACT DETAILS SECTION
+        ===========================================
+        -->
+        <div class="contact-section">
+            <h2>Aerotest Ltd. Contact Details:</h2>
+            <div class="contact-details">
+                <strong>Website:</strong> <a href="https://www.aerotest.com" target="_blank">www.aerotest.com</a><br>
+                <strong>Email:</strong> <a href="mailto:info@aerotest.com">info@aerotest.com</a><br>
+                <strong>Tel:</strong> <a href="tel:+441442235557">+44 (0) 1442 235557</a>
+            </div>
         </div>
 
         <!-- Hidden back link (can be shown by changing display: none to display: block in CSS) -->
@@ -287,7 +305,7 @@
     -->
     <footer>
         <div class="footer-left">
-            <p>&copy; 2025 Aerotest Manuals - AT1470 Documentation</p>
+            <p>&copy; 2025 Aerotest Ltd.</p>
         </div>
         <div class="footer-right">
             <a href="../admin.html" class="admin-button">Admin Login</a>

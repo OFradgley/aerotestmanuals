@@ -251,27 +251,47 @@
         <div class="product-list">
             <h2>Product Manual Pages</h2>
             
+            <!-- 
+            ===========================================
+            ADDING NEW PRODUCTS TO ADMIN PANEL
+            ===========================================
+            To add a new product to this admin panel:
+            
+            1. COPY one of the product-item blocks below
+            2. PASTE it before the closing </div> tag
+            3. MODIFY the following parts:
+               - product-name: Change to your new product name
+               - product-status: Set to "Manual upload pending" for new products
+               - href="FOLDER_NAME/": Change to match your new product folder
+            
+            EXAMPLE FOR ADDING AT1475:
             <div class="product-item">
                 <div>
-                    <div class="product-name">AT1470 - Equipment Documentation</div>
+                    <div class="product-name">AT1475 - Your Product Description</div>
                     <div class="product-status">Status: Manual upload pending</div>
                 </div>
                 <div class="product-actions">
-                    <a href="AT1470/" class="btn btn-view">View Page</a>
+                    <a href="AT1475/" class="btn btn-view">View Page</a>
                 </div>
             </div>
             
+            NOTE: Make sure the folder name in href="" matches the actual folder you created
+            ===========================================
+            -->
+            
+            <!-- EXISTING PRODUCT 1 -->
             <div class="product-item">
                 <div>
-                    <div class="product-name">AT1472 - Equipment Documentation</div>
-                    <div class="product-status">Status: Manual upload pending</div>
+                    <div class="product-name">ATL1175-001 - C-130J QEC WVR with Accessible Tail-Pipe “Aero-bag”</div>
+                    <div class="product-status">Status: Active (Issue 11 available)</div>
                 </div>
                 <div class="product-actions">
-                    <a href="AT1472/" class="btn btn-view">View Page</a>
+                    <a href="AT1175/" class="btn btn-view">View Page</a>
                 </div>
             </div>
             
-            <div class="product-item">
+            <!-- EXISTING PRODUCT 2 -->
+                        <div class="product-item">
                 <div>
                     <div class="product-name">ATL1482-001 - LM2500 Series GTE Preservation Aero-bag</div>
                     <div class="product-status">Status: Active (Issue 1 available)</div>
@@ -280,25 +300,111 @@
                     <a href="AT1482/" class="btn btn-view">View Page</a>
                 </div>
             </div>
+
+            <!-- EXISTING PRODUCT 3 -->
+            <div class="product-item">
+                <div>
+                    <div class="product-name">ATL1517-001 - LM2500 PT Preservation Aero-bag</div>
+                    <div class="product-status">Status: Manual WIP</div>
+                </div>
+                <div class="product-actions">
+                    <a href="AT1517/" class="btn btn-view">View Page</a>
+                </div>
+            </div>
+            <!-- 
+            ===========================================
+            ADD NEW PRODUCTS HERE
+            ===========================================
+            Copy one of the blocks above and paste it here, then modify:
+            
+            TEMPLATE FOR NEW PRODUCT:
+            <div class="product-item">
+                <div>
+                    <div class="product-name">YOUR_PRODUCT_CODE - Your Product Description</div>
+                    <div class="product-status">Status: Manual upload pending</div>
+                </div>
+                <div class="product-actions">
+                    <a href="YOUR_FOLDER_NAME/" class="btn btn-view">View Page</a>
+                </div>
+            </div>
+            
+            COMMON STATUS OPTIONS:
+            - "Status: Manual upload pending" (for new products without files)
+            - "Status: Active (Issue 1 available)" (for products with manuals)
+            - "Status: Active (Multiple issues available)" (for products with multiple manual versions)
+            ===========================================
+            -->
+            
         </div>
 
         <!-- Instructions Section -->
         <div class="product-list" style="margin-top: 30px;">
             <h2>Quick Instructions</h2>
             <div style="padding: 20px; background-color: #f9f9f9; border-radius: 5px;">
-                <h3>To Add New Product Manuals:</h3>
+                
+                <!-- 
+                ===========================================
+                COMPLETE WORKFLOW FOR ADDING NEW PRODUCTS
+                ===========================================
+                -->
+                
+                <h3>🆕 Adding a Completely New Product:</h3>
                 <ol>
-                    <li><strong>Upload Files:</strong> Place PDF manuals and product images in the respective product folders</li>
-                    <li><strong>Update Links:</strong> Edit the index.html file in each product folder to link to your uploaded files</li>
-                    <li><strong>Add New Products:</strong> Copy existing folder structure and modify the main index.html to add new product cards</li>
+                    <li><strong>Create Folder:</strong> Create a new folder (e.g., "AT1475") in the main directory</li>
+                    <li><strong>Copy Template:</strong> Copy the index.html file from AT1470 or AT1472 folder into your new folder</li>
+                    <li><strong>Edit Product Page:</strong> Open the new index.html and update:
+                        <ul>
+                            <li>Page title (line ~12): Change "AT1470" to your product code</li>
+                            <li>Product title (line ~75): Update the h1 heading</li>
+                            <li>Footer text: Update copyright line with your product name</li>
+                        </ul>
+                    </li>
+                    <li><strong>Add to Admin Panel:</strong> Scroll up in this admin.html file and copy/paste a product-item block (see comments above)</li>
+                    <li><strong>Upload Files:</strong> Add your product images and PDF manuals to the new folder</li>
                 </ol>
                 
-                <h3>File Management:</h3>
+                <h3>📁 File Management for Existing Products:</h3>
                 <ul>
-                    <li><strong>Images:</strong> Place product photos in the product folders (recommended: .jpg format)</li>
-                    <li><strong>PDFs:</strong> Upload manual PDFs to the respective product folders</li>
-                    <li><strong>Updates:</strong> Use the "Manage Files" buttons above to access product folders directly</li>
+                    <li><strong>Product Images:</strong> 
+                        <ul>
+                            <li>Place .jpg/.png files in the product folder</li>
+                            <li>Update the index.html file in that folder to link to your image</li>
+                            <li>Replace the placeholder div with: &lt;img src="your-image.jpg" alt="Product Photo" /&gt;</li>
+                        </ul>
+                    </li>
+                    <li><strong>PDF Manuals:</strong> 
+                        <ul>
+                            <li>Upload PDF files to the product folder</li>
+                            <li>Edit index.html in that folder to update the manual links</li>
+                            <li>Change href="#" to href="your-manual.pdf"</li>
+                            <li>Remove the onclick="alert(...)" part</li>
+                        </ul>
+                    </li>
+                    <li><strong>Status Updates:</strong> After adding files, update the "Status:" in this admin panel</li>
                 </ul>
+                
+                <h3>🔧 Quick Reference - File Locations:</h3>
+                <div style="background-color: #e3f2fd; padding: 15px; border-radius: 5px; margin-top: 10px;">
+                    <strong>Main Website Files:</strong><br>
+                    📄 <code>/index.html</code> - Main QR code landing page<br>
+                    📄 <code>/admin.html</code> - This admin panel (add new products here)<br>
+                    🖼️ <code>/ms-icon-310x310.png</code> - Company logo<br>
+                    🖼️ <code>/favicon-32x32.png</code> - Browser tab icon<br><br>
+                    
+                    <strong>Product Structure Example:</strong><br>
+                    📁 <code>/AT1475/</code> - New product folder<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;📄 <code>index.html</code> - Product page<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;🖼️ <code>product.jpg</code> - Product photo<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;📄 <code>AT1475-Manual-Issue1.pdf</code> - Manual file<br>
+                </div>
+                
+                <h3>✅ Testing Your Changes:</h3>
+                <ul>
+                    <li>Use the "View Page" buttons above to check your product pages</li>
+                    <li>Verify images and PDF links work correctly</li>
+                    <li>Test the admin login from each product page footer</li>
+                </ul>
+                
             </div>
         </div>
     </div>
