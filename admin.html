@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Aerotest Manuals</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        
+        /* Login Form Styles */
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-top: 100px;
+        }
+        
+        .login-form h2 {
+            color: #0070C0;
+            margin-bottom: 30px;
+        }
+        
+        .login-form input[type="password"], .login-form input[type="text"] {
+            width: 250px;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        
+        .password-container {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .toggle-password {
+            color: #0070C0;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+            text-decoration: underline;
+            user-select: none;
+        }
+        
+        .toggle-password:hover {
+            color: #005a9f;
+        }
+        
+        .login-form button {
+            background-color: #0070C0;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        .login-form button:hover {
+            background-color: #005a9f;
+        }
+        
+        .error-message {
+            color: #d32f2f;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        /* Admin Panel Styles */
+        .admin-panel {
+            display: none;
+        }
+        
+        header {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .company-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        
+        .company-logo {
+            height: 60px;
+            width: auto;
+        }
+        
+        .company-info {
+            text-align: left;
+        }
+        
+        .company-name {
+            color: #0070C0;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .company-tagline {
+            color: #333;
+            font-size: 0.85em;
+            margin: 2px 0 0 0;
+            line-height: 1.2;
+        }
+        
+        .admin-title {
+            background-color: #0070C0;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .product-list {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .product-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s;
+        }
+        
+        .product-item:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .product-item:last-child {
+            border-bottom: none;
+        }
+        
+        .product-name {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+        }
+        
+        .product-status {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-view {
+            background-color: #0070C0;
+            color: white;
+        }
+        
+        .btn-view:hover {
+            background-color: #005a9f;
+        }
+        
+        .logout-btn {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-bottom: 20px;
+        }
+        
+        .logout-btn:hover {
+            background-color: #b71c1c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Form -->
+    <div id="loginContainer" class="login-container">
+        <div class="login-form">
+            <h2>Aerotest Admin Access</h2>
+            <p>Enter password to access the admin panel</p>
+            <div class="password-container">
+                <input type="password" id="passwordInput" placeholder="Enter password" />
+                <span id="togglePassword" class="toggle-password" onclick="togglePasswordVisibility()">show</span>
+            </div>
+            <br>
+            <button onclick="checkPassword()">Login</button>
+            <div id="errorMessage" class="error-message">
+                Incorrect password. Please try again.
+            </div>
+            <div style="margin-top: 20px;">
+                <a href="index.html" style="color: #0070C0; text-decoration: none; font-size: 14px;">← Back to Home Page</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-panel">
+        <button class="logout-btn" onclick="logout()">Logout</button>
+        
+        <header>
+            <div class="company-header">
+                <img src="ms-icon-310x310.png" alt="Aerotest Ltd Logo" class="company-logo">
+                <div class="company-info">
+                    <div class="company-name">Aerotest Ltd.</div>
+                    <div class="company-tagline">Consultants & Specialists In Aero-Engine Test Facilities & Ground Support Equipment</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="admin-title">
+            <h1>Admin Panel - Product Manual Management</h1>
+            <p><a href="index.html" style="color: white; text-decoration: underline;">← Back to Home Page</a></p>
+        </div>
+
+        <!-- Product List -->
+        <div class="product-list">
+            <h2>Product Manual Pages</h2>
+            
+            <div class="product-item">
+                <div>
+                    <div class="product-name">AT1470 - Equipment Documentation</div>
+                    <div class="product-status">Status: Manual upload pending</div>
+                </div>
+                <div class="product-actions">
+                    <a href="AT1470/" class="btn btn-view">View Page</a>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div>
+                    <div class="product-name">AT1472 - Equipment Documentation</div>
+                    <div class="product-status">Status: Manual upload pending</div>
+                </div>
+                <div class="product-actions">
+                    <a href="AT1472/" class="btn btn-view">View Page</a>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <div>
+                    <div class="product-name">ATL1482-001 - LM2500 Series GTE Preservation Aero-bag</div>
+                    <div class="product-status">Status: Active (Issue 1 available)</div>
+                </div>
+                <div class="product-actions">
+                    <a href="AT1482/" class="btn btn-view">View Page</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions Section -->
+        <div class="product-list" style="margin-top: 30px;">
+            <h2>Quick Instructions</h2>
+            <div style="padding: 20px; background-color: #f9f9f9; border-radius: 5px;">
+                <h3>To Add New Product Manuals:</h3>
+                <ol>
+                    <li><strong>Upload Files:</strong> Place PDF manuals and product images in the respective product folders</li>
+                    <li><strong>Update Links:</strong> Edit the index.html file in each product folder to link to your uploaded files</li>
+                    <li><strong>Add New Products:</strong> Copy existing folder structure and modify the main index.html to add new product cards</li>
+                </ol>
+                
+                <h3>File Management:</h3>
+                <ul>
+                    <li><strong>Images:</strong> Place product photos in the product folders (recommended: .jpg format)</li>
+                    <li><strong>PDFs:</strong> Upload manual PDFs to the respective product folders</li>
+                    <li><strong>Updates:</strong> Use the "Manage Files" buttons above to access product folders directly</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple password protection (Note: This is basic client-side protection)
+        // For production use, implement proper server-side authentication
+        const ADMIN_PASSWORD = "aerotest2025"; // Change this password as needed
+        
+        function checkPassword() {
+            const enteredPassword = document.getElementById('passwordInput').value;
+            const errorMessage = document.getElementById('errorMessage');
+            
+            if (enteredPassword === ADMIN_PASSWORD) {
+                // Password correct - show admin panel
+                document.getElementById('loginContainer').style.display = 'none';
+                document.getElementById('adminPanel').style.display = 'block';
+                
+                // Store login state in session with timestamp
+                sessionStorage.setItem('adminLoggedIn', 'true');
+                sessionStorage.setItem('adminLoginTime', Date.now().toString());
+                
+                // Clear password field
+                document.getElementById('passwordInput').value = '';
+            } else {
+                // Password incorrect - show error
+                errorMessage.style.display = 'block';
+                document.getElementById('passwordInput').value = '';
+                
+                // Hide error after 3 seconds
+                setTimeout(() => {
+                    errorMessage.style.display = 'none';
+                }, 3000);
+            }
+        }
+        
+        function logout() {
+            // Clear session and return to login
+            sessionStorage.removeItem('adminLoggedIn');
+            sessionStorage.removeItem('adminLoginTime');
+            document.getElementById('adminPanel').style.display = 'none';
+            document.getElementById('loginContainer').style.display = 'block';
+        }
+        
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('passwordInput');
+            const toggleButton = document.getElementById('togglePassword');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleButton.textContent = 'hide';
+            } else {
+                passwordInput.type = 'password';
+                toggleButton.textContent = 'show';
+            }
+        }
+        
+        // Check if user is already logged in when page loads
+        window.onload = function() {
+            // Clear any stale session data first
+            const currentSession = sessionStorage.getItem('adminLoggedIn');
+            const sessionTimestamp = sessionStorage.getItem('adminLoginTime');
+            const currentTime = Date.now();
+            
+            // Session expires after 30 minutes (1800000 ms)
+            if (currentSession === 'true' && sessionTimestamp && (currentTime - parseInt(sessionTimestamp)) < 1800000) {
+                document.getElementById('loginContainer').style.display = 'none';
+                document.getElementById('adminPanel').style.display = 'block';
+            } else {
+                // Clear expired session
+                sessionStorage.removeItem('adminLoggedIn');
+                sessionStorage.removeItem('adminLoginTime');
+            }
+        }
+        
+        // Allow Enter key to submit password
+        document.getElementById('passwordInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    </script>
+</body>
+</html>
