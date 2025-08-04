@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+    ===========================================
+    PAGE TITLE SETUP
+    ===========================================
+    Change the title below to match your product designation
+    Format: "PRODUCT_NAME - Aerotest Manuals"
+    -->
     <title>AT1472 - Aerotest Manuals</title>
+    <!-- Favicon: Points to the parent directory for the favicon file -->
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <style>
+        /* 
+        ===========================================
+        MAIN STYLING - DO NOT MODIFY UNLESS NEEDED
+        ===========================================
+        */
         body {
             font-family: Arial, sans-serif;
             max-width: 800px;
@@ -20,6 +33,7 @@
             border-radius: 5px;
             margin-bottom: 30px;
         }
+        /* Company header with logo and text */
         .company-header {
             display: flex;
             align-items: center;
@@ -35,7 +49,7 @@
             text-align: left;
         }
         .company-name {
-            color: #0070C0;
+            color: #0070C0;  /* Aerotest blue color */
             font-size: 1.5em;
             font-weight: bold;
             margin: 0;
@@ -52,6 +66,7 @@
             color: #333;
             font-size: 1.3em;
         }
+        /* Hidden navigation elements (breadcrumbs and back links) */
         .breadcrumb {
             margin-bottom: 20px;
             color: #666;
@@ -64,6 +79,7 @@
         .breadcrumb a:hover {
             text-decoration: underline;
         }
+        /* Product image styling */
         .product-image {
             text-align: center;
             margin: 30px 0;
@@ -82,6 +98,7 @@
             color: #666;
             font-style: italic;
         }
+        /* Manual section styling */
         .manual-section {
             margin: 30px 0;
         }
@@ -110,6 +127,7 @@
         .manual-item a:hover {
             text-decoration: underline;
         }
+        /* Hidden back link */
         .back-link {
             display: none;
         }
@@ -123,41 +141,122 @@
     </style>
 </head>
 <body>
+    <!-- Hidden breadcrumb navigation (can be shown by changing display: none to display: block in CSS) -->
     <div class="breadcrumb">
         <a href="../">Home</a> / AT1472
     </div>
 
+    <!-- 
+    ===========================================
+    HEADER SECTION WITH COMPANY BRANDING
+    ===========================================
+    -->
     <header>
+        <!-- Company logo and information section -->
         <div class="company-header">
+            <!-- 
+            LOGO: Points to parent directory for the logo file
+            Make sure ms-icon-310x310.png exists in the root directory
+            -->
             <img src="../ms-icon-310x310.png" alt="Aerotest Ltd Logo" class="company-logo">
             <div class="company-info">
+                <!-- Company name in Aerotest blue (#0070C0) -->
                 <div class="company-name">Aerotest Ltd.</div>
+                <!-- Company tagline/description -->
                 <div class="company-tagline">Consultants & Specialists In Aero-Engine Test Facilities & Ground Support Equipment</div>
             </div>
         </div>
+        <!-- 
+        PRODUCT TITLE
+        Change this to match your specific product designation
+        -->
         <h1 class="product-title">AT1472</h1>
     </header>
 
     <main>
+        <!-- 
+        ===========================================
+        PRODUCT IMAGE SECTION
+        ===========================================
+        TO ADD A PRODUCT IMAGE:
+        1. Place your image file in this folder (same folder as this index.html)
+        2. Replace the placeholder div below with an img tag like this:
+           <img src="your-image-filename.jpg" alt="AT1472 Product Photo" />
+        3. Delete or comment out the placeholder div
+        
+        SUPPORTED IMAGE FORMATS: .jpg, .jpeg, .png, .gif
+        RECOMMENDED: Use .jpg for photos, .png for graphics with transparency
+        
+        EXAMPLE IMAGE CODE:
+        <img src="AT1472-photo.jpg" alt="AT1472 Equipment" />
+        -->
         <div class="product-image">
+            <!-- PLACEHOLDER - Replace this with actual product image -->
             <div class="placeholder">
                 Product photo will be displayed here<br>
                 Please upload an image file named "product.jpg" to this folder
             </div>
         </div>
 
+        <!-- 
+        ===========================================
+        MANUALS SECTION
+        ===========================================
+        TO ADD MANUAL FILES:
+        1. Upload your PDF files to this folder
+        2. Replace the placeholder links below with actual PDF filenames
+        3. To add more versions, copy one of the <li class="manual-item"> blocks
+        
+        CURRENT STATUS: No manual files uploaded yet
+        
+        TO REPLACE PLACEHOLDER LINKS:
+        1. Change href="#" to href="your-manual-filename.pdf"
+        2. Remove the onclick="alert(...)" part
+        3. Update the text from "Issue 1" to match your manual version
+        
+        EXAMPLE WORKING MANUAL LINK:
+        <li class="manual-item">
+            <a href="AT1472-Manual-Issue1.pdf">Issue 1</a>
+        </li>
+        -->
         <div class="manual-section">
             <h2>O&M Manual</h2>
             <ul class="manual-list">
+                <!-- 
+                PLACEHOLDER MANUAL LINK - Replace with actual PDF
+                Current: Shows alert message when clicked
+                Replace with: <a href="YOUR_MANUAL_FILE.pdf">Issue 1</a>
+                -->
                 <li class="manual-item">
                     <a href="#" onclick="alert('Please upload Issue 1 manual PDF to this folder')">Issue 1</a>
                 </li>
+                
+                <!-- 
+                TO ADD MORE MANUAL VERSIONS:
+                Copy the block above and modify the filename and version number
+                
+                EXAMPLES:
+                <li class="manual-item">
+                    <a href="AT1472-Manual-Issue2.pdf">Issue 2</a>
+                </li>
+                
+                <li class="manual-item">
+                    <a href="AT1472-Manual-Issue3.pdf">Issue 3</a>
+                </li>
+                -->
             </ul>
         </div>
 
+        <!-- Hidden back link (can be shown by changing display: none to display: block in CSS) -->
         <a href="../" class="back-link">← Back to All Manuals</a>
     </main>
 
+    <!-- 
+    ===========================================
+    FOOTER SECTION
+    ===========================================
+    Update the product name in the footer if needed
+    -->
     <footer>
         <p>&copy; 2025 Aerotest Manuals - AT1472 Documentation</p>
     </footer>

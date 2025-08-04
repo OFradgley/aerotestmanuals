@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+    ===========================================
+    PAGE TITLE SETUP
+    ===========================================
+    Change the title below to match your product designation
+    Format: "PRODUCT_NAME - Aerotest Manuals"
+    -->
     <title>ATL1482-001 - Aerotest Manuals</title>
+    <!-- Favicon: Points to the parent directory for the favicon file -->
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <style>
+        /* 
+        ===========================================
+        MAIN STYLING - DO NOT MODIFY UNLESS NEEDED
+        ===========================================
+        */
         body {
             font-family: Arial, sans-serif;
             max-width: 800px;
@@ -20,6 +33,7 @@
             border-radius: 5px;
             margin-bottom: 30px;
         }
+        /* Company header with logo and text */
         .company-header {
             display: flex;
             align-items: center;
@@ -35,7 +49,7 @@
             text-align: left;
         }
         .company-name {
-            color: #0070C0;
+            color: #0070C0;  /* Aerotest blue color */
             font-size: 1.5em;
             font-weight: bold;
             margin: 0;
@@ -52,6 +66,7 @@
             color: #333;
             font-size: 1.3em;
         }
+        /* Hidden navigation elements (breadcrumbs and back links) */
         .breadcrumb {
             margin-bottom: 20px;
             color: #666;
@@ -64,6 +79,7 @@
         .breadcrumb a:hover {
             text-decoration: underline;
         }
+        /* Product image styling */
         .product-image {
             text-align: center;
             margin: 30px 0;
@@ -74,6 +90,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+        /* Manual section styling */
         .manual-section {
             margin: 30px 0;
         }
@@ -102,6 +119,7 @@
         .manual-item a:hover {
             text-decoration: underline;
         }
+        /* Hidden back link */
         .back-link {
             display: none;
         }
@@ -115,40 +133,107 @@
     </style>
 </head>
 <body>
+    <!-- Hidden breadcrumb navigation (can be shown by changing display: none to display: block in CSS) -->
     <div class="breadcrumb">
         <a href="../">Home</a> / AT1482
     </div>
 
+    <!-- 
+    ===========================================
+    HEADER SECTION WITH COMPANY BRANDING
+    ===========================================
+    -->
     <header>
+        <!-- Company logo and information section -->
         <div class="company-header">
+            <!-- 
+            LOGO: Points to parent directory for the logo file
+            Make sure ms-icon-310x310.png exists in the root directory
+            -->
             <img src="../ms-icon-310x310.png" alt="Aerotest Ltd Logo" class="company-logo">
             <div class="company-info">
+                <!-- Company name in Aerotest blue (#0070C0) -->
                 <div class="company-name">Aerotest Ltd.</div>
+                <!-- Company tagline/description -->
                 <div class="company-tagline">Consultants & Specialists In Aero-Engine Test Facilities & Ground Support Equipment</div>
             </div>
         </div>
+        <!-- 
+        PRODUCT TITLE
+        Change this to match your specific product designation
+        -->
         <h1 class="product-title">ATL1482-001 LM2500 Series GTE Preservation Aero-bag</h1>
     </header>
 
     <main>
+        <!-- 
+        ===========================================
+        PRODUCT IMAGE SECTION
+        ===========================================
+        TO CHANGE THE PRODUCT IMAGE:
+        1. Place your image file in this folder (same folder as this index.html)
+        2. Update the src="" below to point to your image file
+        3. Update the alt="" text to describe your product
+        
+        SUPPORTED IMAGE FORMATS: .jpg, .jpeg, .png, .gif
+        RECOMMENDED: Use .jpg for photos, .png for graphics with transparency
+        -->
         <div class="product-image">
             <img src="Image H.jpg" alt="AT1482 LM2500 Series GTE Preservation Aero-bag" />
         </div>
 
+        <!-- 
+        ===========================================
+        MANUALS SECTION
+        ===========================================
+        TO ADD MORE MANUAL VERSIONS:
+        1. Upload your PDF file to this folder
+        2. Copy one of the <li class="manual-item"> blocks below
+        3. Change the href="" to point to your PDF filename
+        4. Change the text (e.g., "Issue 1" to "Issue 2", "Issue 3", etc.)
+        
+        EXAMPLE FOR ADDING ISSUE 2:
+        <li class="manual-item">
+            <a href="YOUR_MANUAL_FILENAME_ISSUE2.pdf">Issue 2</a>
+        </li>
+        -->
         <div class="manual-section">
             <h2>O&M Manual</h2>
             <ul class="manual-list">
+                <!-- 
+                CURRENT MANUAL: Issue 1
+                The href below points to the actual PDF file in this folder
+                -->
                 <li class="manual-item">
                     <a href="ATL1482-001 LM2500 Series GTE Preservation Aero-bag Installation Instructions - Issue 1.pdf">Issue 1</a>
                 </li>
+                
+                <!-- 
+                TO ADD MORE VERSIONS, COPY THE BLOCK ABOVE AND MODIFY:
+                
+                <li class="manual-item">
+                    <a href="YOUR_MANUAL_FILENAME_ISSUE2.pdf">Issue 2</a>
+                </li>
+                
+                <li class="manual-item">
+                    <a href="YOUR_MANUAL_FILENAME_ISSUE3.pdf">Issue 3</a>
+                </li>
+                -->
             </ul>
         </div>
 
+        <!-- Hidden back link (can be shown by changing display: none to display: block in CSS) -->
         <a href="../" class="back-link">← Back to All Manuals</a>
     </main>
 
+    <!-- 
+    ===========================================
+    FOOTER SECTION
+    ===========================================
+    Update the product name in the footer if needed
+    -->
     <footer>
-        <p>&copy; 2025 Aerotest Manuals - AT1482 Documentation</p>
+        <p>&copy; 2025 Aerotest Ltd. - ATL1482-001 Documentation</p>
     </footer>
 </body>
 </html>
